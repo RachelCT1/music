@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <ul class="type" id="btn_type">
+          <li datatype="column" class="selected">Column</li>
+          <li datatype="dot">Dot</li>
+      </ul>
+        <p>
+            Volume<input class="slider" id="volume" type="range" min="0" max="100" value="20">
+        </p>
+    </header>
+   <div class="left">
+     <p>Music Content</p>
+     <ul id="mus_list">
+         <% music.forEach(function(name){ %>
+         <li title="<%= name%>"><%= name%></li>
+       <% })%>
+     </ul>
+   </div>
+    <div class="right" id="right_box"></div>
+    <script type="text/javascript" src="./javascripts/musicVisualizer.js"></script>
+  <script type="text/javascript" src="./javascripts/index.js"></script>
+  </body>
+</html>
